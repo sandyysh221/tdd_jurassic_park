@@ -43,16 +43,16 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.removeDinosaur();
-    const expected = [dinosaur1, dinosaur2, dinosaur3];
-    assert.deepStrictEqual(park.collectionOfDinosaurs, expected);
+    const actual = [dinosaur1, dinosaur2, dinosaur3];
+    assert.deepStrictEqual(park.collectionOfDinosaurs, actual);
   });
 
   it("should be able to find the dinosaur that attracts the most visitors", function () {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
-    const expected = park.findMostPopularDinosaur();
-    assert.strictEqual(expected, "Velociraptor");
+    const actual = park.findMostPopularDinosaur();
+    assert.strictEqual(actual, "Velociraptor");
   });
 
   it("should be able to find all dinosaurs of a particular species", function () {
@@ -60,8 +60,8 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
-    const expected = park.countSpecies("Triceratops");
-    assert.strictEqual(expected, 2);
+    const actual = park.countSpecies("Triceratops");
+    assert.strictEqual(actual, 2);
   });
 
   it("should be able to calculate the total number of visitors per day", function () {
@@ -69,8 +69,8 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
-    const expected = park.visitorsPerDay();
-    assert.strictEqual(expected, 425);
+    const actual = park.visitorsPerDay();
+    assert.strictEqual(actual, 425);
   });
 
   it("should be able to calculate the total number of visitors per year", function () {
@@ -78,8 +78,8 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
-    const expected = park.visitorsPerYear();
-    assert.strictEqual(expected, 155125);
+    const actual = park.visitorsPerYear();
+    assert.strictEqual(actual, 155125);
   });
 
   it("should be able to calculate total revenue for one year", function () {
@@ -87,7 +87,7 @@ describe("Park", function () {
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
     park.addDinosaur(dinosaur4);
-    const expected = park.revenueForYear();
-    assert.strictEqual(expected, 1551250);
+    const actual = park.revenueForYear();
+    assert.strictEqual(actual, 1551250);
   });
 });
