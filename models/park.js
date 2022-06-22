@@ -13,15 +13,8 @@ Park.prototype.addDinosaur = function (dinosaur) {
 };
 
 Park.prototype.removeDinosaur = function (dinosaur) {
-  const listWithDinosaurs = [];
-
-  for (const dinosaur of this.collectionOfDinosaurs) {
-    if (!dinosaur.isEmpty()) {
-      listWithDinosaurs.push(dinosaur);
-    }
-  }
-
-  this.collectionOfDinosaurs = listWithDinosaurs;
+  const index = this.collectionOfDinosaurs.indexOf(dinosaur);
+  this.collectionOfDinosaurs.splice(index, 1);
 };
 
 Park.prototype.findMostPopularDinosaur = function () {

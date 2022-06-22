@@ -42,9 +42,9 @@ describe("Park", function () {
     park.addDinosaur(dinosaur1);
     park.addDinosaur(dinosaur2);
     park.addDinosaur(dinosaur3);
-    park.removeDinosaur();
+    park.removeDinosaur(dinosaur2);
     const actual = park.collectionOfDinosaurs;
-    const expected = [dinosaur1, dinosaur2, dinosaur3];
+    const expected = [dinosaur1, dinosaur3];
     assert.deepStrictEqual(actual, expected);
   });
 
